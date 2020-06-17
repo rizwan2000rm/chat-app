@@ -1,5 +1,7 @@
 ## socketio-chat-webapp
 
+Real Time Chat Web App
+
 ## Built with
 
 > React
