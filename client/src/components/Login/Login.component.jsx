@@ -8,31 +8,30 @@ const Login = () => {
   const [room, setRoom] = useState("");
 
   return (
-    <div className="login">
+    <div className="container text-center">
       <h2>Login</h2>
-      <div>
-        <input
-          type="text"
-          className="input"
-          /* eslint-disable-next-line no-restricted-globals */
-          onChange={() => setName(event.target.value)}
-          placeholder=""
-        />
-      </div>
-      <div>
-        <input
-          type="text"
-          className="input"
-          /* eslint-disable-next-line no-restricted-globals */
-          onChange={() => setRoom(event.target.value)}
-          placeholder=""
-        />
-      </div>
+
+      <input
+        type="text"
+        className="form-control my-3"
+        /* eslint-disable-next-line no-restricted-globals */
+        onChange={() => setName(event.target.value)}
+        placeholder="Name"
+      />
+
+      <input
+        type="text"
+        className="form-control my-3"
+        /* eslint-disable-next-line no-restricted-globals */
+        onChange={() => setRoom(event.target.value)}
+        placeholder="Room"
+      />
+
       <Link
         to={`/chat?name=${name}&room=${room}`}
         onClick={(event) => (!name || !room ? event.preventDefault() : null)}
       >
-        <button className="btn" type="submit">
+        <button className="btn btn btn-outline-primary" type="submit">
           Sign In
         </button>
       </Link>

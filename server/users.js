@@ -1,4 +1,3 @@
-
 // Users Data
 const users = [];
 
@@ -35,7 +34,7 @@ const removeUser = (id) => {
 
 // Searching a User
 const getUser = (id) => {
- return  users.find((user) => user.id === id);
+  return users.find((user) => user.id === id);
 };
 
 // Searching a User in a specific room
